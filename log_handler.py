@@ -7,6 +7,6 @@ lines = int(os.getenv('LINES'))
 with open(file) as file:
     data = file.read()
     data = data.split('\n')
-    message = data[-lines:].join('/n')
+    message = '/n'.join(data[-lines:])
 response = requests.post(url=slack_url, headers={
                          'Content-type': 'application/json'}, json={'text': message})
