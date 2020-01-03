@@ -15,7 +15,7 @@ attachments = [
         "pretext": logs,
         "title": "Log contents",
         "text": message,
-        "color": "#7CD197"
+        "color": "#7f1668"
     }
 ]
 response = requests.post(url=slack_url, headers={
