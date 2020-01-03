@@ -2,9 +2,9 @@
 import requests
 import os
 slack_url = os.getenv('SLACK_URL')
-file = os.getenv('LOG_LOCATION')
+logs = os.getenv('LOG_LOCATION')
 lines = int(os.getenv('LINES'))
-with open(file) as file:
+with open(logs) as file:
     data = file.read()
     data = data.split('\n')
     message = '\n'.join(data[-lines:])
@@ -12,7 +12,6 @@ attachments = [
     {
         "pretext": file,
         "title": "Log contents",
-        # "title_link": "https://groove.hq/path/to/ticket/1943",
         "text": message,
         "color": "#7CD197"
     }
