@@ -10,7 +10,7 @@ with open(logs) as file:
     message = '\n'.join(data[-lines:])
 attachments = [
     {
-        "pretext": file,
+        "pretext": logs,
         "title": "Log contents",
         "text": message,
         "color": "#7CD197"
