@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import requests
 import os
 slack_url = os.getenv('SLACK_URL')
