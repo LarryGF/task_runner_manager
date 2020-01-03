@@ -4,7 +4,7 @@ import os
 slack_url = os.getenv('SLACK_URL')
 logs = os.getenv('LOG_LOCATION')
 # lines = int(os.getenv('LINES'))
-lines = 6
+lines = 5
 with open(logs) as file:
     data = file.read()
     data = data.split('\n')
